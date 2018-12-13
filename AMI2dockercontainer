@@ -9,3 +9,19 @@ https://docs.docker.com/engine/installation/ubuntulinux/
 import docker image from mounted root volume
 tar -c -C /mnt/ . | docker import - appcimage-master-1454216413
 docker run -t -i 6d6614111fcb03d5ca79541b8a23955202dfda74995d968b5ffb5d45c7e68da9 /bin/bash
+
+push into docker-hub
+
+=======================
+From local machine:
+mount /dev/sdb2 /mnt 
+mount: unknown filesystem type 'LVM2_member'
+
+how to solve it: http://ask.xmodulo.com/mount-lvm-partition-linux.html
+
+after mounting, install dokcer and run:
+
+tar -c -C /mnt/ . | docker import - appcimage-master-1454216413
+docker run -t -i 6d6614111fcb03d5ca79541b8a23955202dfda74995d968b5ffb5d45c7e68da9 /bin/bash
+
+push into docker-hub
