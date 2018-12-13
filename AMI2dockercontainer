@@ -1,0 +1,11 @@
+On source AMI locate root volume snapshot id in the description 
+/dev/sda1=snap-eb79b0b1:15:true:gp2
+launch instance with public Ubuntu 14.04 AMI
+create volume from snapshot snap-eb79b0b1 (in the same region that the instance runs). attach volume to the instance as /dev/sdf
+mount volume to /mnt
+mount /dev/xvdf /mnt
+install docker
+https://docs.docker.com/engine/installation/ubuntulinux/
+import docker image from mounted root volume
+tar -c -C /mnt/ . | docker import - appcimage-master-1454216413
+docker run -t -i 6d6614111fcb03d5ca79541b8a23955202dfda74995d968b5ffb5d45c7e68da9 /bin/bash
