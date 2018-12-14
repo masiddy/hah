@@ -25,3 +25,15 @@ tar -c -C /mnt/ . | docker import - appcimage-master-1454216413
 docker run -t -i 6d6614111fcb03d5ca79541b8a23955202dfda74995d968b5ffb5d45c7e68da9 /bin/bash
 
 push into docker-hub
+
+
+
+
+====================
+Docker can create an image from a tar file using the docker import command. From the documentation:
+Usage: docker import URL|- [REPOSITORY[:TAG]]
+
+Create an empty filesystem image and import the contents of the tarball 
+(.tar, .tar.gz, .tgz, .bzip, .tar.xz, .txz) into it, then optionally
+tag it.
+So you should be able to create a tar archive from your AMI image and then feed that to docker.
