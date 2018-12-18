@@ -31,4 +31,6 @@ export PATH=${M2_HOME}/bin:${PATH}" > /etc/profile.d/maven.sh
 sudo chmod +x /etc/profile.d/maven.sh
 source /etc/profile.d/maven.sh
 
+export PATH=$PATH:/usr/local/src/apache-maven/bin/
+
 mvn --version
