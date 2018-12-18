@@ -20,7 +20,7 @@ sudo cd /usr/local/src
 sudo wget http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
 
 tar -xf apache-maven-3.5.4-bin.tar.gz
-rm -rf apache-maven-3.5.4-bin.tar.gz
+#rm -rf apache-maven-3.5.4-bin.tar.gz
 mv apache-maven-3.5.4/ apache-maven/
 
 echo "# Apache Maven Environment Variables
