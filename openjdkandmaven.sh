@@ -16,21 +16,6 @@ java -version
 
 
 
-sudo cd /usr/local/src
-sudo wget http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz
-
-tar -xf apache-maven-3.5.4-bin.tar.gz
-#rm -rf apache-maven-3.5.4-bin.tar.gz
-mv apache-maven-3.5.4/ apache-maven/
-
-echo "# Apache Maven Environment Variables
-# MAVEN_HOME for Maven 1 - M2_HOME for Maven 2
-export M2_HOME=/usr/local/src/apache-maven
-export PATH=${M2_HOME}/bin:${PATH}" > /etc/profile.d/maven.sh
-
-sudo chmod +x /etc/profile.d/maven.sh
-source /etc/profile.d/maven.sh
-
-export PATH=$PATH:/usr/local/src/apache-maven/bin/
+sudo yum install maven
 
 mvn --version
